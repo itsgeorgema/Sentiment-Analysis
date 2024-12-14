@@ -11,7 +11,7 @@ original_avengers_review = pd.read_csv("avengers_infinity_war_large_reviews.csv"
 avengers_review=original_avengers_review.get(["Reviewer Name", "Rating", "Review Text"])
 avengers_review.set_index("Reviewer Name")
 
-#make a function to clean the data for the reviews by cleaning and tokenizing text
+#make a function to clean the data for the reviews
 def preprocess_text(text):
     #remove punctuation and make lowercase
     text = text.translate(str.maketrans("", "", string.punctuation))
